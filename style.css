@@ -15,12 +15,18 @@
     font-family: "Lilita One";
     display: flex;
     align-items: center;
-        
-
 }
 
 .nav_logo{
-    flex:1;
+    flex: 1;
+}
+
+.ig_link a{
+    font-size: 40px;
+    color: white;
+    position: relative;
+    top: 5px;;
+    padding-left: 20px;
 }
 
 .toggle{
@@ -31,17 +37,17 @@
 header{
     background: rgba(0, 0, 0, 0.866);
     padding: 10px 20px;
-    position: fixed;
     top:0; left:0 ; right:0;
+    position: fixed;  
     box-shadow: 0 5px 10px grey;
     display: flex;
     align-items: center;
+    justify-content:flex-start;
     z-index: 100;
 }
 
-.navbar{
-    display: flex;
-    list-style: none;
+nav{  
+    font-family: "Tilt Warp";
 }
 
 nav a:hover{
@@ -50,37 +56,55 @@ nav a:hover{
 
 ul li:hover{
     background-color:rgb(78, 79, 79);
+    transition: ease-in-out 0.4s;
 }
 
 ul li{
     display: inline-block;
-    padding: 10px;
-
+    list-style: none;
+    padding: 15px 10px;
 }
 
-ul li ul.dropdown{
-    display: none;
+.navbar{
+    position: relative;
 }
+
 ul li ul.dropdown li{
     display: block;
 }
-
-ul li:hover ul.dropdown{
-    position: absolute;  
-    top: 75%;
+ul li ul.dropdown{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    top: 50px; 
     padding: 10px;
-    right:10px;
     width: 100px;
     display: block;
-    background: rgba(0, 0, 0, 0.866);  
+    background: rgba(0, 0, 0, 0.866); 
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 101;
+    transform: translatex(-16%);
+}
+
+ul li:hover>ul.dropdown {
+    visibility: visible;
+    opacity: 1;
 
 }
 
 
 ul li a{
     color: white;
-    padding:10px;
+    padding: 10px;
 }
+
 .toggle a{
     color: white;
 }
+
+@media screen and (max-width: 500px) {
+    nav{
+        d
+    }
+} 
