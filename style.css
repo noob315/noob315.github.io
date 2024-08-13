@@ -3,45 +3,14 @@
     padding: 0;
     text-decoration: none;
 }
-
-.nav_logo img{
-    width: 60px;
-    margin-right: 10px;
+:root{
+    --menu-count: 3;
 }
-
-.nav_logo a{
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    font-family: "Lilita One";
-    display: flex;
-    align-items: center;
-}
-
-.nav_logo{
-
-}
-
-.ig_link a{
-    font-size: 40px;
-    color: white;
-    position: relative;
-    top: 5px;;
-    padding-left: 20px;
-}
-
-.ig_link a:hover{
-    color: rgb(0, 0, 0);
-}
-
-.toggle{
-    font-size: 30px;
-    display: none;
-}
-
 header{
     background: rgba(0, 0, 0, 0.866);
     padding: 10px 20px;
     top:0; left:0 ; right:0;
+    height: 60px;
     position: fixed;  
     box-shadow: 0 5px 10px grey;
     display: flex;
@@ -50,36 +19,90 @@ header{
     z-index: 100;
 }
 
-nav{  
-    font-family: "Tilt Warp";
+/*----------logo----------*/
+
+.nav_logo{
     display: flex;
     align-items: center;
 }
 
-nav a:hover{
+.nav_logo img{
+    width: 60px;
+    margin-right: 10px;
+}
+
+.logo_text{
+    color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+}
+
+#first_text{
+    font-family: Lilita One, Tilt Warp;
+    font-size: 30px;
+}
+
+#second_text{
+    font-family: Michroma;
+    font-size: 12px;
+    display: block;
+}
+
+/*------------ig icon-----------*/
+
+.navbar_item_with_ig{
+    display: flex;
+    align-items: center;
+}
+
+.ig_link{
+    font-size: 35px;
+    color: white;
+    position: relative;
+    top: 5px;
+    padding-left: 20px;
+}
+
+.ig_link:hover{
     color: rgb(0, 0, 0);
 }
 
-ul li:hover{
+/*-----------navbar item-------------*/
+
+.navbar{  
+    font-family:Tilt Warp;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover{
+    color: rgb(0, 0, 0);
+}
+
+.navbar_item li:hover{
     background-color:rgb(78, 79, 79);
     transition: ease-in-out 0.4s;
 }
 
-ul li{
+.navbar_item li{
+    position: relative;
     display: inline-block;
     list-style: none;
     padding: 15px 10px;
 }
 
-.navbar{
-    position: relative;
+.navbar_item li a{
+    color: white;
+    padding: 10px;
 }
 
-ul li ul.dropdown li{
+
+/*------------dropdown------------*/
+
+.dropdown li{
     display: block;
 }
 
-ul li ul.dropdown{
+.dropdown{
     position: absolute;
     visibility: hidden;
     opacity: 0;
@@ -94,22 +117,89 @@ ul li ul.dropdown{
     transform: translatex(-16%);
 }
 
-ul li:hover>ul.dropdown {
+.navbar_item li:hover> .dropdown {
     visibility: visible;
     opacity: 1;
 }
 
-ul li a{
-    color: white;
-    padding: 10px;
+
+
+.toggle{
+    font-size: 35px;
 }
 
 .toggle a{
     color: white;
+    display: none;
 }
 
-@media screen and (max-width: 500px) {
-    nav{
-        d
+
+/* @media screen and (max-width: 600px) {
+    header{
+        display: block;
     }
-} 
+    nav{
+        display: block;
+        position: relative;
+    }
+    .ig_link{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+
+    .nav.active, .toggle a{
+        display: block;
+    }
+    .toggle {
+        position: absolute;
+        top: -50px; right:0px
+    }
+
+} */
+
+@media screen and (max-width: 600px) {
+    .navbar_item_with_ig{
+        position: fixed;
+        height: 100%;
+        top:0; right:0; 
+        background: rgba(0, 0, 0, 0.678);
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        gap: 20px;
+        padding: 5rem 0;
+        transition: ease-in-out 0.5s;
+    }
+
+
+
+    .navbar_item li{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .dropdown li{
+        display: block;
+        font-size: 5px;
+
+
+        
+    }
+    .dropdown{
+        padding: 0;
+        margin: 0;
+        width: 100px;
+    }
+    
+    .navbar_item{
+        position: relative;
+        flex-direction: column;
+    }
+    .dropdown{
+        position: absolute;
+        width: 200px;
+    }
+}
