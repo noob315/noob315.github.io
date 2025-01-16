@@ -159,7 +159,7 @@ header{
 
 } */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
     .navbar_item_with_ig{
         position: fixed;
         height: 100%;
@@ -183,8 +183,8 @@ header{
 
     .dropdown li{
         display: block;
-        font-size: 5px;
-
+        font-size: 10px;
+        right:  
 
         
     }
