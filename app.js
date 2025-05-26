@@ -63,11 +63,3 @@ document.addEventListener('click', function (e) {
     }
 });
 
-function detectTouchDevice() {
-    if ('ontouchstart' in window || navigator.maxTouchPoints) {
-        document.body.classList.add('touch-device');
-    } else {
-        document.body.classList.remove('touch-device');
-    }
-}
-detectTouchDevice();
