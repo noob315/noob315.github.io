@@ -7,7 +7,7 @@
     --menu-count: 3;
 }
 header{
-    background: rgba(0, 0, 0, 0.866);
+    background: rgba(0, 0, 0, 0.9);
     padding: 10px 20px;
     top:0; left:0 ; right:0;
     height: 60px;
@@ -109,9 +109,9 @@ header{
     display: none;
     top: 50px; 
     padding: 10px;
-    width: 100px;
+    width: 100%;
     display: block;
-    background: rgba(0, 0, 0, 0.866); 
+    background: rgba(0, 0, 0, 0.9); 
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); 
     z-index: 101;
     transform: translatex(-16%);
@@ -159,7 +159,7 @@ header{
 
 } */
 
-@media screen and (max-width: 610px) {
+/*@media screen and (max-width: 610px) {
     .navbar_item_with_ig{
         position: fixed;
         height: 100%;
