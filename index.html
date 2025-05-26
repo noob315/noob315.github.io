@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>noob315's website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?"> 
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
@@ -28,16 +28,22 @@
         <nav class="navbar">
             
             <div class="toggle">
-                <a href="#"><ion-icon name="menu-outline"></ion-icon></a>     
+                <a href="#"><ion-icon name="menu-outline"></ion-icon></a>                 
             </div>
 
+            
+
                 <div class="navbar_item_with_ig">
+                    <div class ="close-btn">
+                        <a href="#"><ion-icon name="close-outline"></ion-icon></a>
+                    </div>
                     <ul class="navbar_item">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About me</a></li>
                         <li><a href="#">Portfolio ▾</a>
                             <ul class="dropdown">
                                 <li><a href="#">Project 1</a></li>
+                                <li><a href="#">Project 2</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -49,23 +55,8 @@
 
     </header>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
-    <script>
-        $(function(){
-            $(".toggle").on("click", function(){
-                if($(".nav").hasClass("active")){
-                    $(".nav").removeClass("active");
-                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-                } else{
-                    $(".nav").addClass("active");
-                    $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
-                }
-            });
-        });
-    </script> -->
 
-
+    <script src="app.js"></script>
 </body>
 </html>
 
