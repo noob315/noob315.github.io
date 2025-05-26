@@ -232,6 +232,12 @@ header {
         transform: translateY(0);
     }
 
+    body.touch-device .navbar_item li:hover > .dropdown {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px); 
+    }
+
     .toggle a {
         display: block;
         color: white;
