@@ -16,3 +16,23 @@ closeButton.addEventListener('click', function (e) {
     navbar.classList.remove('active');
 });
 
+document.querySelectorAll('navbar_item a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+    });
+});
+
+function detectTouchDevice() {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.classList.add('touch-device');
+    } else {
+        document.body.classList.remove('touch-device');
+    }
+}
+
+// Run the detection on page load
+detectTouchDevice();
+
+// Optional: Re-run detection if the window is resized
+window.addEventListener('resize', detectTouchDevice);

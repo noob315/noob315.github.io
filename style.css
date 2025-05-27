@@ -87,6 +87,13 @@ header {
     transition: ease-in-out 0.4s;
 }
 
+body.touch-device .navbar_item li:hover,
+body.touch-device .navbar_item li a:hover {
+    background-color: inherit; /* Reset background color */
+    color: inherit; /* Reset text color */
+    transition: none; /* Disable transitions */
+}
+
 .navbar_item li {
     position: relative;
     display: inline-block;
@@ -429,4 +436,25 @@ header {
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.project2 {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+}
+
+.project2 img {
+    width: 45%; 
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+html { 
+    scroll-padding-top: 60px; 
+    scroll-behavior: smooth; 
 }
