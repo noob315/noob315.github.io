@@ -1,6 +1,7 @@
 const navbar = document.querySelector('.navbar_item_with_ig');
 const closeButton = document.querySelector('.close-btn a');
 const toggleButton = document.querySelector('.toggle a');
+const navLinks = document.querySelectorAll('.navbar_item a'); // Corrected selector with a dot (.)
 
 // Open the menu
 toggleButton.addEventListener('click', function (e) {
@@ -16,23 +17,23 @@ closeButton.addEventListener('click', function (e) {
     navbar.classList.remove('active');
 });
 
-document.querySelectorAll('navbar_item a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+// Scroll to corresponding section on navbar item click
+navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetId = this.getAttribute('href').substring(1); // Get the target section ID
+        const targetSection = document.getElementById(targetId); // Find the target section
+        if (targetSection) {
+            const navbarHeight = document.querySelector('header').offsetHeight; // Get navbar height
+            const targetPosition = targetSection.offsetTop - navbarHeight; // Adjust for navbar height
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+        navbar.classList.remove('active'); // Close the menu after clicking
     });
 });
 
-function detectTouchDevice() {
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-        document.body.classList.add('touch-device');
-    } else {
-        document.body.classList.remove('touch-device');
-    }
-}
 
-// Run the detection on page load
-detectTouchDevice();
 
-// Optional: Re-run detection if the window is resized
-window.addEventListener('resize', detectTouchDevice);

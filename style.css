@@ -87,13 +87,6 @@ header {
     transition: ease-in-out 0.4s;
 }
 
-body.touch-device .navbar_item li:hover,
-body.touch-device .navbar_item li a:hover {
-    background-color: inherit; /* Reset background color */
-    color: inherit; /* Reset text color */
-    transition: none; /* Disable transitions */
-}
-
 .navbar_item li {
     position: relative;
     display: inline-block;
