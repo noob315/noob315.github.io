@@ -46,7 +46,7 @@ header {
 }
 
 #second_text {
-    font-family: Chalkduster;
+    font-family: Tilt Warp;
     font-size: 15px;
     display: block;
 }
@@ -310,8 +310,8 @@ header {
     color: #222;
 }
 
-.edu-header {
-    max-width: 800px;
+.edu-header {  /* This is the header section for education */
+    max-width: 800px; /* Limit the width for better readability */
     margin: 0 auto;
     text-align: center;
 }
@@ -329,7 +329,7 @@ header {
 }
 
 .edu-text h3 {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #222;
     margin-bottom: 10px;
 }
@@ -350,10 +350,87 @@ header {
 
 .edu-list li p {
     margin: 5px 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #444;
 }
 
+#work-experience {
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Light gray background for contrast */
+    color: #333;
+    text-align: center;
+}
+
+#work-experience h2 {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.work-header {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.work-text {
+    font-family: 'Tilt Warp', sans-serif;
+
+    line-height: 1.6;
+    color: #555;
+    margin-top: 20px;
+    padding: 20px;
+    background: white; /* White background for text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left;
+}
+
+.work-text h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd; /* Add a subtle underline for job title */
+    padding-bottom: 5px;
+}
+
+.work-text h4 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.work-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.work-list li {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.work-list li p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 641px) {
+    #work-experience {
+        text-align: left;
+    }
+
+    .work-text {
+        text-align: left;
+    }
+}
 
 #portfolio {
     padding: 50px 20px;
@@ -368,6 +445,7 @@ header {
     margin-bottom: 30px;
     color: #222;
 }
+
 
 .project-card {
     max-width: 800px;
